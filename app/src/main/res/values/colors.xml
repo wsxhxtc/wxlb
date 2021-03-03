@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+
+
+    <color name="green_4d">#ff4dbf8a</color>
+    <color name="bull_44">#ff44ade8</color>
+    <color name="bull_00">#ff001160</color>
+    <color name="bull_1E">#ff1E81CF</color>
+    <color name="bull_cc">#ffcceeff</color>
+    <color name="sz_background">#fff</color>
+    <color name="black_28">#ff282828</color>
+    <color name="black">#ff000000</color>
+    <color name="black_222">#222</color>
+    <color name="black_3">#333333</color>
+    <color name="orange_bg">#fffb7032</color>
+    <color name="gray_7f">#ff7f7f7f</color>
+    <color name="gray_e7e">#ffe7e7e7</color>
+    <color name="gray_ef">#ffefefef</color>
+    <color name="gray_f0">#fff0eff5</color>
+    <color name="gray_91">#ff919191</color>
+    <color name="gray_9e">#ff9e9e9e</color>
+    <color name="gray_d4">#ffd4d4d4</color>
+    <color name="gray_dark_66">#ff666666</color>
+    <color name="main_color">#ffd6b585</color>
+    <color name="orange">#fffd9a13</color>
+    <color name="red_d4">#ffd43a31</color>
+    <color name="red_e8">#ffe84d40</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="text_black">#ff4b4b4b</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="sz_rsfw_text">#4b4b4a</color>
+    <color name="black_36">#FF363A3E</color>
+    <color name="black_2e">#FF2E2F30</color>
+    <color name="text_8b">#888888</color>
+    <color name="text_9">#999999</color>
+    <color name="gainsboro">#dcdcdc</color><!--淡灰色 -->
+    <!--淡灰色 -->
+    <color name="title_c">#ff5499eb</color>
+    <color name="gray_22">#222222</color>
+    <color name="white_f2">#FFF2F2F2</color>
+    <color name="nearby_bule">#FF3E94F8</color>
+    <color name="spliter_color">#cfcfcf</color>
+    <color name="spliter_color_light">#e9e9e9</color>
+    <color name="background_line_gray">#E7E7E7</color>
+    <color name="background_line_gray1">#F9F9F9</color>
+
+    <color name="background_jbxx">#ffc000</color>
+    <color name="background_cbxx">#c669dd</color>
+    <color name="background_jfxx">#92d050</color>
+    <color name="background_dyxx">#9bc2e6</color>
+    <color name="background_rd">#ffcccc</color>
+    <color name="gray_9a">#ff9a9a9a</color>
+
+
+    !--TitleBar -->
+    <color name="title_bar">#5197FE</color>
+
+    <!-- BASIC THEME-->
+    <!--1 1976d2 2196f3 757575 ffffff-->
+    <!-- system status bar -->
+
+    <color name="statusBarColor">#1976d2</color>
+    <!-- app theme -->
+    <!-- app component -->
+    <!-- app text -->
+    <color name="textColorPrimary">#757575</color>
+    <!-- app background -->
+    <color name="windowBackground">#ffffff</color>
+    <!-- app navigation -->
+    <color name="navigationBarColor">#1976d2</color>
+
+    <color name="overlay_light">#F8F8F8</color>
+
+    <!-- RED -->
+    <color name="red_50">#fde0dc</color>
+    <color name="red_100">#f9bdbb</color>
+    <color name="red_200">#f69988</color>
+    <color name="red_300">#f36c60</color>
+    <color name="red_400">#e84e40</color>
+    <color name="red_500">#e51c23</color>
+    <color name="red_600">#dd191d</color>
+    <color name="red_700">#d01716</color>
+    <color name="red_800">#c41411</color>
+    <color name="red_900">#b0120a</color>
+    <color name="red_a100">#ff7997</color>
+    <color name="red_a200">#ff5177</color>
+    <color name="red_a400">#ff2d6f</color>
+    <color name="red_a700">#e00032</color>
+
+    <!-- PINK -->
+    <color name="pink_50">#fce4ec</color>
+    <color name="pink_100">#f8bbd0</color>
+    <color name="pink_200">#f48fb1</color>
+    <color name="pink_300">#f06292</color>
+    <color name="pink_400">#ec407a</color>
+    <color name="pink_500">#e91e63</color>
+    <color name="pink_600">#d81b60</color>
+    <color name="pink_700">#c2185b</color>
+    <color name="pink_800">#ad1457</color>
+    <color name="pink_900">#880e4f</color>
+    <color name="pink_a100">#ff80ab</color>
+    <color name="pink_a200">#ff4081</color>
+    <color name="pink_a400">#f50057</color>
+    <color name="pink_a700">#c51162</color>
+
+    <!-- PURPLE -->
+    <color name="purple_50">#f3e5f5</color>
+    <color name="purple_100">#e1bee7</color>
+    <color name="purple_200">#cd93d8</color>
+    <color name="purple_300">#ba68c8</color>
+    <color name="purple_400">#ab47bc</color>
+    <color name="purple_40080">#30ab47bc</color>
+    <color name="purple_500">#9c27b0</color>
+    <color name="purple_600">#8e24aa</color>
+    <color name="purple_700">#7b1fa2</color>
+    <color name="purple_800">#6a1b9a</color>
+    <color name="purple_900">#4a148c</color>
+    <color name="purple_a100">#ea80fc</color>
+    <color name="purple_a200">#e040fb</color>
+    <color name="purple_a400">#d500f9</color>
+    <color name="purple_a700">#aa00ff</color>
+
+    <!-- DEEP PURPLE -->
+    <color name="deep_purple_50">#ede7f6</color>
+    <color name="deep_purple_100">#d1c4e9</color>
+    <color name="deep_purple_200">#b39ddb</color>
+    <color name="deep_purple_300">#9575cd</color>
+    <color name="deep_purple_400">#7e57c2</color>
+    <color name="deep_purple_500">#673ab7</color>
+    <color name="deep_purple_600">#5e35b1</color>
+    <color name="deep_purple_700">#512da8</color>
+    <color name="deep_purple_800">#4527a0</color>
+    <color name="deep_purple_900">#311b92</color>
+    <color name="deep_purple_a100">#b388ff</color>
+    <color name="deep_purple_a200">#7c4dff</color>
+    <color name="deep_purple_a400">#651fff</color>
+    <color name="deep_purple_a700">#6200ea</color>
+</resources>

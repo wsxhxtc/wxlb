@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic_muscle">
+
+    <TextView
+        android:id="@+id/x1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="22sp"
+        android:text="三头肌">
+    </TextView>
+    <TextView
+        android:id="@+id/x2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="200dp"
+        android:text="胸肌">
+    </TextView>
+    <TextView
+        android:id="@+id/x3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="22sp"
+        android:layout_marginBottom="150dp"
+        android:text="大腿">
+    </TextView>
+</RelativeLayout>

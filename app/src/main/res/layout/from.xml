@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_bd"
+
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="信息考核表"
+            android:textSize="22sp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_7f"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="1/锻炼持续时间(分)"
+                />
+
+            <EditText
+                android:id="@+id/time1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="锻炼日期选择"
+                />
+
+            <TextView
+                android:id="@+id/s1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:background="@drawable/shape_bd"
+                android:textSize="22sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="2/锻炼持续时间(分)"
+                />
+
+            <EditText
+                android:id="@+id/time2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="锻炼日期选择"
+                />
+            <TextView
+                android:id="@+id/s2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:background="@drawable/shape_bd"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="3/锻炼持续时间(分)"
+                />
+
+            <EditText
+                android:id="@+id/time3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="锻炼日期选择"
+                />
+            <TextView
+                android:id="@+id/s3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:background="@drawable/shape_bd"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="4/锻炼持续时间(分)"
+                />
+
+            <EditText
+                android:id="@+id/time4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="锻炼日期选择"
+                />
+            <TextView
+                android:id="@+id/s4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:background="@drawable/shape_bd"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="5/锻炼持续时间(分)"
+                />
+
+            <EditText
+                android:id="@+id/time5"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="锻炼日期选择"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/s5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_bd"
+                android:text=""
+                android:textSize="22sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/apply"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="22sp"
+            android:text="提交考核成绩表"
+            android:background="@drawable/shape_bd"
+            android:gravity="center">
+        </TextView>
+    </LinearLayout>
+
+</ScrollView>

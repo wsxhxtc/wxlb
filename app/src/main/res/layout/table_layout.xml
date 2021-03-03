@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bin.david.form.core.SmartTable
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/apply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="22sp"
+        android:text="提交考核成绩表"
+        android:background="@drawable/shape_bd"
+        android:layout_marginBottom="100dp"
+        android:gravity="center">
+    </TextView>
+</LinearLayout>

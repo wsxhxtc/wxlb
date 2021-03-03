@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="选择锻炼部位"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/white_f2"
+        android:background="@color/green_4d">
+    </TextView>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="三头肌" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胸肌" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大腿" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="选择时间"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/white_f2"
+        android:background="@color/green_4d">
+    </TextView>
+
+    <com.othershe.calendarview.weiget.CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <TextView
+        android:id="@+id/apply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="保存"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/white_f2"
+        android:background="@color/green_4d">
+    </TextView>
+</LinearLayout>
