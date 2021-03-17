@@ -1,0 +1,28 @@
+数据库表字段
+
+训练计划 ActionPlan
+{
+  "id": 1,                  // long，表示计划的id，自增
+  "categories": 1,          // int, 训练的类别，1表示 三头肌， 2表示 胸肌， 3表示 大腿，如果3种类型组合，使用或运算符，例如 1|2=3，表示训练三头肌和胸肌
+  "createTime": 1342000000, // long, 创建时间
+  "expireTime": 1342000900, // long, 表示任务截止时间
+}
+
+训练任务 ActionTask
+{
+  "id": 1,          // long, 当前任务的id，自增
+  "planId": 123,    // long, 所属训练计划的id
+  "category": 1,    // int, 训练的类别，值为1/2/4，表示 三头肌/胸肌/大腿
+  "subCategory": 1,  // int, 具体训练内容
+  "createTime": 1340000000 // long 创建时间
+}
+
+训练记录 ActionRecord
+{
+  "id": 1,              // long, 训练记录的id，自增
+  "planId": 1,          // long, 所属计划
+  "taskId": 123,        // long, 所属任务
+  "date": "2021-03-15", // string, 训练的日期
+  "duration": 120       // int, 训练时长，单位秒
+
+}

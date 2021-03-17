@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/tv_menu_action_right"
+  android:layout_width="wrap_content"
+  android:layout_height="56dp"
+  android:paddingLeft="16dp"
+  android:paddingRight="16dp"
+  android:gravity="center"
+  android:text="添加训练计划"
+  android:textColor="@color/white">
+
+</TextView>

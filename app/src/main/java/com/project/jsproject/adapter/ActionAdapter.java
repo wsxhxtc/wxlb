@@ -1,17 +1,13 @@
 package com.project.jsproject.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.project.jsproject.R;
-import com.project.jsproject.activity.OwnPlayActivity;
 import com.project.jsproject.entity.ActionEntity;
 import com.superrecycleview.superlibrary.adapter.BaseViewHolder;
 import com.superrecycleview.superlibrary.adapter.SuperBaseAdapter;
@@ -60,16 +56,6 @@ public class ActionAdapter extends SuperBaseAdapter<ActionEntity> {
         ImageAdapter adapter =new ImageAdapter(context,list);
         adapter.setData(item.getId());
         view.setAdapter(adapter);
-
-       /* mItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(context, OwnPlayActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("type",item.getId());
-                context.startActivity(intent);
-            }
-        });*/
 
     }
 

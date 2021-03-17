@@ -1,4 +1,4 @@
-     package com.project.jsproject;
+package com.project.jsproject;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.project.jsproject.activity.ActionActivity;
+import com.project.jsproject.activity.ActionPlanListActivity;
 import com.project.jsproject.activity.FromApplayActivity;
-import com.project.jsproject.activity.RecordActivity;
+import com.project.jsproject.activity.HistoryRecordActivity;
 import com.project.jsproject.activity.TjActivity;
 
 public class MainActivity extends NavHostFragment {
@@ -40,7 +40,7 @@ public class MainActivity extends NavHostFragment {
         view.findViewById(R.id.x3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), RecordActivity.class);
+                Intent intent=new Intent(getActivity(), HistoryRecordActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +48,7 @@ public class MainActivity extends NavHostFragment {
         view.findViewById(R.id.x2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), ActionActivity.class);
+                Intent intent=new Intent(getActivity(), ActionPlanListActivity.class);
                 startActivity(intent);
             }
         });

@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.project.jsproject.R;
-import com.project.jsproject.activity.ActionActivity;
-import com.project.jsproject.activity.OwnPlayActivity;
+import com.project.jsproject.activity.ActionPlanListActivity;
+import com.project.jsproject.activity.PlanTaskListActivity;
 import com.superrecycleview.superlibrary.adapter.BaseViewHolder;
 import com.superrecycleview.superlibrary.adapter.SuperBaseDragAdapter;
 
@@ -39,11 +39,11 @@ public class ImageAdapter extends SuperBaseDragAdapter<String> {
         holder.setOnClickListener(R.id.item, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, OwnPlayActivity.class);
+                Intent intent=new Intent(context, PlanTaskListActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("type",str);
                 context.startActivity(intent);
-                ((ActionActivity)context).finish();
+                ((ActionPlanListActivity)context).finish();
             }
         });
     }

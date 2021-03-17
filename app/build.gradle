@@ -20,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
     greendao {
         schemaVersion 1 //当前数据库版本
     }
@@ -29,22 +34,55 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$rootProject.ext.lifecycleVersion"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$rootProject.ext.lifecycleVersion"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$rootProject.ext.lifecycleVersion"
+
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$rootProject.ext.lifecycleVersion"
+
+    // Annotation processor
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.lifecycleVersion"
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
+
+    implementation "androidx.room:room-runtime:$rootProject.ext.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.ext.roomVersion"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$rootProject.ext.roomVersion"
+
+    // rxjava2
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxJava2"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxAndroid"
+
+
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.preference:preference:1.1.1'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     implementation 'org.greenrobot:greendao:3.3.0' // 添加库
+
     implementation 'com.supercwn.superrecycleview:superlibrary:1.2.0'
     implementation 'com.github.Othershe:CalendarView:1.2.1'
-    api 'com.github.bumptech.glide:glide:4.1.1'
+
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    api 'com.github.bumptech.glide:glide:4.1.1'
+
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
     implementation 'com.github.huangyanbin:SmartTable:2.2.0'
+    implementation 'com.haibin:calendarview:3.7.1'
 }

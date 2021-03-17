@@ -1,157 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="vertical">
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/green_4d"
-    android:gravity="center"
-    android:text="选择锻炼部位"
-    android:textColor="@color/white_f2"
-    android:textSize="22sp" />
-
+  android:layout_height="match_parent">
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:orientation="vertical">
 
-    <CheckBox
-      android:id="@+id/cb1"
-      android:layout_width="wrap_content"
+    <TextView
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:checked="true"
-      android:text="三头肌" />
+      android:gravity="center_vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:text="请输入训练计划名称"
+      android:textColor="#666666"
+      android:textSize="16sp" />
 
-
-    <CheckBox
-      android:id="@+id/cb2"
-      android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/edit_plan_title"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="胸肌" />
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      tools:text="30天腹肌训练"/>
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="20dp"
+      android:background="#ededed" />
 
-
-    <CheckBox
-      android:id="@+id/cb3"
-      android:layout_width="wrap_content"
+    <TextView
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="大腿" />
+      android:gravity="center_vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:text="请选择锻炼部位"
+      android:textColor="#666666"
+      android:textSize="16sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:orientation="vertical">
+
+      <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="三头肌" />
+
+
+      <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="胸肌" />
+
+
+      <CheckBox
+        android:id="@+id/cb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大腿" />
+
+    </LinearLayout>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="20dp"
+      android:background="#ededed" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:text="请选择时间"
+      android:textColor="#666666"
+      android:textSize="16sp" />
+
+    <TextView
+      android:id="@+id/date_select"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:textColor="@color/black_2e"
+      android:textSize="18sp"
+      tools:text="2021-03-14"/>
+
+    <com.othershe.calendarview.weiget.WeekView
+      android:layout_marginTop="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="36dp" />
+
+    <com.othershe.calendarview.weiget.CalendarView
+      android:id="@+id/calendar"
+      android:layout_width="match_parent"
+      android:layout_height="220dp" />
+
+    <TextView
+      android:id="@+id/date_page_range"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:paddingLeft="16dp"
+      android:gravity="left|center_vertical"
+      android:textColor="#cdcdcd"
+      android:textSize="14sp"
+      tools:text="2021年3月"/>
 
   </LinearLayout>
 
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/green_4d"
-    android:gravity="center"
-    android:text="选择时间"
-    android:textColor="@color/white_f2"
-    android:textSize="22sp" />
-
-  <TextView
-    android:id="@+id/date_select"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:gravity="center"
-    android:textColor="@color/black_2e"
-    android:textSize="18sp"
-    tools:text="2021-03-14"/>
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">'
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="日"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="一"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="二"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="三"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="四"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="五"/>
-
-    <TextView
-      android:layout_width="0dp"
-      android:layout_height="30dp"
-      android:layout_weight="1"
-      android:gravity="center"
-      android:textSize="12sp"
-      android:textColor="#cdcdcd"
-      android:text="六"/>
-
-  </LinearLayout>
-
-  <com.othershe.calendarview.weiget.CalendarView
-    android:id="@+id/calendar"
-    android:layout_width="match_parent"
-    android:layout_height="220dp" />
-
-  <TextView
-    android:id="@+id/date_page_range"
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:paddingLeft="16dp"
-    android:gravity="left|center_vertical"
-    android:textColor="#cdcdcd"
-    android:textSize="14sp"
-    tools:text="2021年3月"/>
-
-  <TextView
-    android:id="@+id/apply"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/green_4d"
-    android:gravity="center"
-    android:text="保存"
-    android:textColor="@color/white_f2"
-    android:textSize="22sp" />
-
-</LinearLayout>
+</ScrollView>

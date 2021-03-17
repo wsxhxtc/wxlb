@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingLeft="16dp"
+  android:paddingRight="16dp"
+  android:paddingTop="10dp"
+  android:paddingBottom="10dp">
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:textSize="16sp"
+    android:textColor="#aaaaaa"
+    tools:text="30天腹肌训练计划"/>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+    <TextView
+      android:id="@+id/category_tag1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="4dp"
+      android:paddingRight="4dp"
+      android:paddingTop="2dp"
+      android:paddingBottom="2dp"
+      android:background="@drawable/bg_category_tag"
+      android:textSize="12sp"
+      android:textColor="@color/white"
+      tools:text="三头肌"/>
+
+    <TextView
+      android:id="@+id/category_tag2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="4dp"
+      android:paddingRight="4dp"
+      android:paddingTop="2dp"
+      android:paddingBottom="2dp"
+      android:background="@drawable/bg_category_tag"
+      android:layout_marginLeft="8dp"
+      android:textSize="12sp"
+      android:textColor="@color/white"
+      tools:text="胸肌"/>
+
+    <TextView
+      android:id="@+id/category_tag3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="4dp"
+      android:paddingRight="4dp"
+      android:paddingTop="2dp"
+      android:paddingBottom="2dp"
+      android:background="@drawable/bg_category_tag"
+      android:layout_marginLeft="8dp"
+      android:textSize="12sp"
+      android:textColor="@color/white"
+      tools:text="大腿"/>
+  </LinearLayout>
+
+</LinearLayout>
