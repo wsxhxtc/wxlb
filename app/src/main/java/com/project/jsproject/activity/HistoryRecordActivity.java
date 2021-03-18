@@ -21,6 +21,7 @@ import com.project.jsproject.base.BaseActivity;
 import com.project.jsproject.entity.ExerciseRecord;
 import com.project.jsproject.entity.PlanTask;
 import com.project.jsproject.utils.Log;
+import com.project.jsproject.utils.PreferencesUtil;
 import com.project.jsproject.utils.Utils;
 import com.project.jsproject.viewmodel.HistoryRecordViewModel;
 import io.reactivex.BackpressureStrategy;
@@ -228,15 +229,15 @@ public class HistoryRecordActivity extends BaseActivity<HistoryRecordViewModel> 
     return mYear == year && mMonth == month && mDay == date;
   }
 
+  private int recommendTime = 0;
+
   private int getSchemeColor(int sum) {
-    if (sum > 300) {
+    if (recommendTime <= 0) {
+      recommendTime = Integer.parseInt(
+          PreferencesUtil.getString(this, SettingsActivity.RECOMMEND_PLAY_TIME_DAILY, "30"));
+    }
+    if (sum > recommendTime) {
       return GRATE_COLOR;
-    }
-    if (sum > 120) {
-      return GOOD_COLOR;
-    }
-    if (sum > 30) {
-      return BAD_COLOR;
     }
     return WORST_COLOR;
   }

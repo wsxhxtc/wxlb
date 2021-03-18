@@ -24,6 +24,7 @@ import com.project.jsproject.api.BaseUrl;
 import com.project.jsproject.api.service;
 import com.project.jsproject.bean.loginUserDTO;
 
+import com.project.jsproject.utils.PreferencesUtil;
 import com.project.jsproject.utils.Utils;
 import java.security.MessageDigest;
 import retrofit2.Call;
@@ -40,14 +41,12 @@ public class LoginActivity extends AppCompatActivity {
     private EditText input_name;
 
     private EditText input_password;
-    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        preferences = getSharedPreferences("app_setting", Context.MODE_PRIVATE);
-        String token = preferences.getString(APP_TOKEN, "");
+        String token = PreferencesUtil.getString(this, APP_TOKEN, "");
         if (!TextUtils.isEmpty(token)) {
             BaseUrl.token = token;
             goToMainPage();
@@ -68,8 +67,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String username = input_name.getText().toString();
                 String password = input_password.getText().toString();
                 String token = Utils.getMD5(username+"_"+password);
-                preferences.edit().putString(APP_TOKEN, token).apply();
-
+                PreferencesUtil.putString(LoginActivity.this, APP_TOKEN, token);
 //                if (!username.isEmpty() && !password.isEmpty()) {
 //                    Call<loginUserDTO> call = new Retrofit.Builder().baseUrl(BaseUrl.BASEURL).client(Appcofing.getOkHttpClient())
 //                            .addConverterFactory(GsonConverterFactory.create(new Gson())).build().create(

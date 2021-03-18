@@ -9,6 +9,7 @@ import com.project.jsproject.viewmodel.ExerciseViewModel;
 import com.project.jsproject.viewmodel.HistoryRecordViewModel;
 import com.project.jsproject.viewmodel.PlanTaskListViewModel;
 import com.project.jsproject.viewmodel.SelectTasksViewModel;
+import com.project.jsproject.viewmodel.SettingsViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
@@ -39,6 +40,9 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     }
     if (modelClass.isAssignableFrom(ExerciseViewModel.class)) {
       return (T) new ExerciseViewModel(mDataSource);
+    }
+    if (modelClass.isAssignableFrom(SettingsViewModel.class)) {
+      return (T) new SelectTasksViewModel(mDataSource);
     }
     throw new IllegalArgumentException("Unknown ViewModel class");
   }

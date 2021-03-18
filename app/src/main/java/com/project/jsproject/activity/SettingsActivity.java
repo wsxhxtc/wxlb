@@ -1,67 +1,76 @@
 package com.project.jsproject.activity;
 
-import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceFragmentCompat;
+import androidx.annotation.NonNull;
 
 import com.project.jsproject.R;
 import com.project.jsproject.api.BaseUrl;
 
+import com.project.jsproject.base.BaseActivity;
+import com.project.jsproject.utils.PreferencesUtil;
+import com.project.jsproject.viewmodel.SettingsViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends BaseActivity<SettingsViewModel> {
 
-    private Spinner mSpinner;
-    private List<String>time;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        time=new ArrayList<>();
+  public static final String RECOMMEND_PLAY_TIME_DAILY = "recommend_play_time_daily";
 
+  private Spinner mSpinner;
+  private List<String> time;
 
-        time.add("25");
-        time.add("10");
-        time.add("30");
-        time.add("40");
+  @NonNull
+  @Override
+  protected Class<SettingsViewModel> getViewModelClass() {
+    return SettingsViewModel.class;
+  }
 
-        setContentView(R.layout.settings_activity);
-        mSpinner=(Spinner) findViewById(R.id.spnner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, time);
-        mSpinner.setAdapter(adapter);
-        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                BaseUrl.SetttingTime=time.get(i);
-            }
+  @Override
+  protected int getLayoutId() {
+    return R.layout.settings_activity;
+  }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+  @Override
+  protected void initView() {
+    mSpinner = findViewById(R.id.spnner);
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        android.R.layout.simple_list_item_1, time);
+    mSpinner.setAdapter(adapter);
+    mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+      @Override
+      public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        BaseUrl.SetttingTime = time.get(i);
+        PreferencesUtil.putString(SettingsActivity.this, RECOMMEND_PLAY_TIME_DAILY, time.get(i));
+      }
 
-            }
-        });
-        switch (BaseUrl.SetttingTime){
-            case "25":
-                mSpinner.setSelection(0);
-                break;
-            case "10":
-                mSpinner.setSelection(1);
-                break;
-            case "30":
-                mSpinner.setSelection(2);
-                break;
-            case "40":
-                mSpinner.setSelection(3);
-                break;
-        }
+      @Override
+      public void onNothingSelected(AdapterView<?> adapterView) {
 
+      }
+    });
+    String lastTime = PreferencesUtil
+        .getString(SettingsActivity.this, RECOMMEND_PLAY_TIME_DAILY, "30");
+    for (int i = 0; i < time.size(); i++) {
+      if (TextUtils.equals(lastTime, time.get(i))) {
+        mSpinner.setSelection(i);
+        break;
+      }
     }
+  }
+
+  @Override
+  protected void initData() {
+    super.initData();
+    time = new ArrayList<>();
+    for (int i = 0; i < 10; i++) {
+      time.add(String.format("%d", (i + 1) * 10));
+    }
+  }
 
 }

@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.project.jsproject">
+  package="com.project.jsproject">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/jdgl"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/jdgl"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity
+      android:label="@string/title_activity_settings"
+      android:name=".activity.SettingsActivity" />
+    <activity
+      android:label="@string/title_activity_draw"
+      android:name=".DrawActivity"
+      android:theme="@style/AppTheme.NoActionBar" />
+    <activity android:name=".activity.LoginActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/jdgl"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/jdgl"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".activity.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
-          <activity
-            android:name=".DrawActivity"
-            android:label="@string/title_activity_draw"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.Player" />
+    <activity android:name=".activity.AnimalActivity" />
+    <activity android:name=".activity.TjActivity" />
+    <activity android:name=".activity.HistoryRecordActivity" />
+    <activity android:name=".activity.AddPlanActivity" />
+    <activity android:name=".activity.ActionPlanListActivity" />
+    <activity android:name=".activity.PlanTaskListActivity" />
+    <activity android:name=".activity.AlllPlayActivity" />
+    <activity
+      android:name=".activity.FromApplayActivity"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    <activity android:name=".activity.TimerActivity" />
+    <activity android:name=".activity.AllPlanTasksActivity" />
+    <activity android:name=".activity.ExerciseActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.Player" />
-        <activity android:name=".activity.AnimalActivity" />
-        <activity android:name=".activity.TjActivity" />
-        <activity android:name=".activity.HistoryRecordActivity" />
-        <activity android:name=".activity.AddPlanActivity" />
-        <activity android:name=".activity.ActionPlanListActivity" />
-        <activity android:name=".activity.PlanTaskListActivity" />
-        <activity android:name=".activity.AlllPlayActivity" />
-        <activity android:name=".activity.FromApplayActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".activity.TimerActivity" />
-        <activity android:name=".activity.AllPlanTasksActivity" />
-        <activity android:name=".activity.ExerciseActivity" />
+  </application>
 
-    </application>
+  <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -14,7 +14,7 @@ public interface ExerciseRecordDao {
   @Insert
   Completable insertRecord(ExerciseRecord record);
 
-  @Query("SELECT * FROM exerciseRecords WHERE timestamp >= :startTime AND timestamp <= :endTime")
+  @Query("SELECT * FROM exerciseRecords WHERE timestamp >= :startTime AND timestamp <= :endTime ORDER BY timestamp DESC")
   Flowable<List<ExerciseRecord>> getRecords(long startTime, long endTime);
 
 }
